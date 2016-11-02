@@ -19,7 +19,20 @@ namespace HiTeamCity.Test.Unit
         public void GetHomePage()
         {
             var actual = _sut.Index() as ViewResult;
-            if (actual != null) Assert.That(actual.ViewName, Is.EqualTo(string.Empty));
+            if (actual != null)
+            {
+                Assert.That(actual.ViewName, Is.EqualTo(string.Empty));
+            }
+        }
+
+        [Test]
+        public void GetAboutPage()
+        {
+            var actual = _sut.About() as ViewResult;
+            if (actual != null)
+            {
+                Assert.That(actual.ViewBag.Message, Is.EqualTo("Your application description page"));
+            }
         }
     }
 }
