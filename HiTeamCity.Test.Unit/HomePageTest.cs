@@ -31,7 +31,7 @@ namespace HiTeamCity.Test.Unit
             var actual = _sut.About() as ViewResult;
             if (actual != null)
             {
-                Assert.That(actual.ViewBag.Message, Is.EqualTo("Your application description page"));
+                Assert.That(actual.ViewBag.Message, Is.EqualTo("Your application description page."));
             }
         }
     }
