@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 
 namespace HiTeamCity.Controllers
@@ -10,6 +11,7 @@ namespace HiTeamCity.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Message = WebConfigurationManager.AppSettings["environment"];
             return View();
         }
 
