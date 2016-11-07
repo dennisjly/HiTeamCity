@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Configuration;
@@ -11,7 +12,7 @@ namespace HiTeamCity.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = WebConfigurationManager.AppSettings["environment"];
+            ViewBag.Message = ConfigurationManager.AppSettings["environment"];
             return View();
         }
 
